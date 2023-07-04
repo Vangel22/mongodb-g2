@@ -1,0 +1,58 @@
+//Class 1
+// 1. Setup mongo db
+// 2. Explain relational and non relational databases
+// 3. Privelleges
+
+//data.json
+// CRUD
+// GET, POST, PUT, PATCH, DELETE
+{
+  [{ _id: "test12345", name: "Vangel", age: 23 }];
+}
+
+
+// _id
+// 64a43daa5df2f795e0442129
+// name
+// "Vangel"
+// fullTime
+// true
+// gpa
+// 4
+// age
+// 23
+// course
+// "C1"
+
+# Relational DBs are tables
+
+- primarni i stranski klucevi
+tabela studenti - id sto e unikatno
+- eden student slusa poveke kursevi
+tabela kurs - broj slusateli, vremetraenje, proekti, domasni, studenti
+- eden kurs ima poveke studenti - N
+- eden student slusa poveke kursevi - N
+
+# Relacii
+- 1:N - eden student slusa poveke kursevi
+- N:1 - poveke studenti slusaat eden kurs
+- 1:1 - eden student slusa eden kurs
+- N:N - poveke studenti slusaat poveke kursevi
+
+# Neralaciona baza na podatoci
+- Dokumenti pretstavuvaat eden red vo tabelata - {}, {}, {}
+- Kolekcii - grupa od eden ili poveke dokumenti - students
+- Baza na podatoci - grupa od eden ili poveke kolekcii
+
+- Baza na podatoci - kolekcii - dokumenti
+- Neralacionite bazi na podatoci skladiraat podatoci vo fajlovi
+
+base {
+    [collections]: {
+        [documents]
+    }
+}
+
+
+- Eden podatok koj go vmetnuvame vo baza vo forma na JSON objekt pretstavuva dokument
+- MongoDB raboti so BSON - binary JSON

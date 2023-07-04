@@ -1,0 +1,7 @@
+1. Make a new DB - books, students, cars
+2. Make a collection
+3. Make 5 documents
+    - insertOne() x 2
+    - insertMany({}, {}, {})
+4. Print documents on screen
+*Bonus - sort documents by "name, author, carModel" in alphabetical order

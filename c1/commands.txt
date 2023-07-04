@@ -1,0 +1,14 @@
+- show dbs
+- use books
+- show dbs
+- db.books.insertOne({ author: "Test", title: "Test title" })
+- show collections
+- db.createCollection("newCollection")
+- db.dropDatabase()
+- db.nameOfDB.find()
+- db.books.insertMany([{author: "Chinua Achebe", year: 1958, title: "Things Fall Apart" },{ author: "Dante Alighieri", year: 1315, "title": "The Divine Comedy" }])
+- db.books.find(query, projection) - query WHERE clause - searches for the match, projection returns specified fields
+- db.books.find({ author: "Dante Alighieri" })
+- db.books.find({ _id: ObjectId("YOUR ID") }, { title: true })
+- db.books.find({ _id: ObjectId("YOUR ID") }, { _id: false, title: true })
+- db.books.find({ _id: ObjectId("YOUR ID") }, { title: 1 }) - title 1 e isto kako title true
