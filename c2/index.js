@@ -1,31 +1,25 @@
-if (true && true) {
-  //mora dvata operatori da bidat tocni
-}
-// true and true - returns true
-// false and true - returns false
-// true and false - returns false
-// false and false - returns false
+const mongoose = require("mongoose");
+const User = require("./user");
 
-if (true || true) {
-  //samo eden od operatorite da bide tocno
-}
+mongoose
+  .connect(
+    "mongodb+srv://Vangel22:test1234@cluster0.12jzasd.mongodb.net/?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Connected!"));
 
-// true and true - returns true
-// false and true - returns true
-// true and false - returns true
-// false and false - returns false
+async function run() {
+  //POST baranje
+  //req.body.name i req.body.age
+  //   const user = new User({ name: "Test User", age: 100 }); //podatocite bi stignale od req.body
+  //   await user.save();
 
-if (false && false) {
-} //nor operacija
+  //HINT if you want to test out Accounts
+  const foundUser = User.findOne({
+    name: "Test User",
+    age: 100,
+  });
 
-if (true) {
-  //here
-} else {
-  //it is false
+  console.log(foundUser);
 }
 
-//   if (ova) {
-//     //izvrsi
-//   } else {
-//     //ova ne e tocno izvrsi tuka
-//   }
+run();

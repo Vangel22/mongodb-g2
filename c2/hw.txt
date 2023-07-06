@@ -1,0 +1,3 @@
+Try to implement new model named Accounts
+- implement schema for Accounts
+- import the Accounts in index.js
