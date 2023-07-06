@@ -4,7 +4,8 @@ Task - 1
     3. find user with a particular name
     4. find all users older than 20 years
     5. find all users younger than 18 years
-    6. find 2 users aged 18 years - make 5 students with age 18
+    6. find 2 users aged 18 years - create NEW 5 students with age 18
+    - alternative - do it with fullTime
 
 Task - 2
     1. create 2+ users
