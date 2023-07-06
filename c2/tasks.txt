@@ -1,0 +1,12 @@
+Task - 1
+    1. find all (cars, users, students etc...) and display them on screen
+    2. sort them by age ascending, then decending
+    3. find user with a particular name
+    4. find all users older than 20 years
+    5. find all users younger than 18 years
+    6. find 2 users aged 18 years - make 5 students with age 18
+
+Task - 2
+    1. create 2+ users
+    2. add one user that has bestFriend -> it should contain a Object Id
+    3. After creation of that user, find his best friend and display him to screen

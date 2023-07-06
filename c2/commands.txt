@@ -1,0 +1,32 @@
+- updateOne({filter to find field}, {update that one document field})
+- updateMany({filter to find by field}, { body to change})
+- deleteOne({ filter by field and delete })
+- deleteMany({ find all with the filtered field })
+
+- Operators are denoted with the $ sign
+- $set - for update
+- $ne - not equal - ({ name: { $ne: "MyName" } })
+- $eq - equal - ({ name: { $eq: "MyName" } })
+- db.students.find - is not the same as .find() method in JavaScript
+- $lt - less than - pomalo - <
+- $lte - less than or equal - pomalo ili ednakvo - <=
+- $gt - greather than - pogolemo - >
+- $gte - greather than or equal - pogolemo ili ednakvo - >=
+- db.students.find({ gpa: { $gt: 3, $lte: 4 } }) - rang od 3 do 4
+- $in - requires array of matches
+- db.students.find({ name: { $in: ["Jenny Doe", "Ana Doe"]  } }) 
+- $nin - negates $in - excludes the matches in the array
+
+### Logical Operators
+- $and
+- db.students.find({ $and: [{ fullTime: true },{ age: { $lte: 30 }  }] })
+- $or
+- db.students.find({ $or: [{ fullTime: true },{ age: { $lte: 22 }  }] })
+- $not
+- db.students.find({ age: { $not: { $gte: 30 } } })
+- $nor
+- db.students.find({ $nor: [{ fullTime: true },{ age: { $gte: 30 }  }] })
+
+- db.students.find().sort({ gpa: -1 or 1 }).limit(3) - sort and limit
+- 1 or true for ascending
+- -1 or false for descending
