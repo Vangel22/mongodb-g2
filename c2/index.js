@@ -14,12 +14,12 @@ async function run() {
   //   await user.save();
 
   //HINT if you want to test out Accounts
-  const foundUser = User.findOne({
+  const foundUser = await User.findOne({
     name: "Test User",
     age: 100,
   });
 
-  console.log(foundUser);
+  console.log("user found", foundUser);
 }
 
 run();
