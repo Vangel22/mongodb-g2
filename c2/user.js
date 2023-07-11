@@ -37,6 +37,10 @@ const userSchema = mongoose.Schema({
   address: addressSchema,
 });
 
+//const user = fetchUser(1)
+//const idOfBFF = user.bestFriend // ke ni vrati ObjectId
+//const bestFriend = fetchUserById(idOfBFF) // mozeme da gi zememe site podatoci od userSchema za ovoj bestFriend
+
 // const userOne = {
 //   _id: "test1",
 //   name: "Vangel",
