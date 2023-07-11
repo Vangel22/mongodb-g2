@@ -23,10 +23,27 @@ const Account = mongoose.model("Account", accountSchema, "account");
 
 //CRUD functionality for MONGODB
 
-const findAccounts = async () => {};
-const create = async () => {};
-const update = async () => {};
-const remove = async () => {};
+const findAccounts = async () => {
+  return await Account.find({}); //gi vrakja site accounts
+  //db.accounts.find()
+};
+
+const create = async (data) => {
+  //data e isto kako req.body
+  const account = new Account(data);
+  return await account.save();
+  //db.accounts.insertOne()
+};
+
+const update = async (id, data) => {
+  return await Account.updateOne({ _id: id }, data);
+  //db.accounts.updateOne()
+};
+
+const remove = async (id) => {
+  return await Account.deleteOne({ _id: id });
+  //db.accounts.deleteOne()
+};
 
 module.exports = {
   findAccounts,

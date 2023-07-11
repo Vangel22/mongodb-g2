@@ -42,6 +42,10 @@ const create = async (data) => {
   return await user.save();
 };
 
+const getAllSortedByName = async () => {
+  return await User.find({}).sort({ name: -1 });
+};
+
 const update = async (id, data) => {
   // const newData = {
   //   name: "Vangel New Account"
@@ -55,6 +59,7 @@ const remove = async (id) => {
 
 module.exports = {
   findUsers,
+  getAllSortedByName,
   create,
   update,
   remove,
