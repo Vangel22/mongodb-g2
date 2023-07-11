@@ -14,7 +14,10 @@ async function run() {
   //   await user.save();
 
   //HINT if you want to test out Accounts
-  const foundUser = await User.find({});
+  const foundUser = await User.findOne({
+    name: "Test User",
+    age: 100,
+  });
 
   console.log("user found", foundUser);
 }
